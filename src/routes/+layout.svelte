@@ -10,19 +10,19 @@
 	<title>ねんどろいどショップ</title>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+<div class="min-h-screen flex flex-col bg-gray-900 text-gray-100">
 	<!-- ヘッダー -->
-	<header class="bg-white shadow">
+	<header class="bg-gray-800 shadow">
 		<div
 			class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
 		>
-			<h1 class="text-xl font-bold text-blue-700">
+			<h1 class="text-xl font-bold text-blue-400">
 				ねんどろいどショップ
 			</h1>
 			<nav class="flex gap-4 text-sm font-medium">
-				<a href="/" class="hover:text-blue-600">ホーム</a>
-				<a href="/cart" class="hover:text-blue-600">カート</a>
-				<a href="/about" class="hover:text-blue-600">会社概要</a>
+				<a href="/" class="hover:text-blue-300">ホーム</a>
+				<a href="/cart" class="hover:text-blue-300">カート</a>
+				<a href="/about" class="hover:text-blue-300">会社概要</a>
 			</nav>
 		</div>
 	</header>
@@ -34,7 +34,7 @@
 
 	<!-- フッター -->
 	<footer
-		class="bg-gray-100 border-t border-gray-200 py-4 mt-8 text-center text-sm text-gray-500"
+		class="bg-gray-800 border-t border-gray-700 py-4 mt-8 text-center text-sm text-gray-400"
 	>
 		&copy; 2025 ねんどろいどショップ. All rights reserved.
 	</footer>
