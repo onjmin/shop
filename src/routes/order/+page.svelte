@@ -71,7 +71,7 @@
 
     // --- 商品情報モック ---
     const product = {
-        name: "ねんどろいど おんJシリーズ 束音ロゼ（再販）",
+        name: "（再販）ねんどろいど おんJシリーズ 束音ロゼ【送料無料】",
         price: 5800,
         discount: 10,
         mainImage: "https://i.imgur.com/VSyr9Ni.png",

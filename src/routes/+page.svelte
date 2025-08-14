@@ -1,6 +1,6 @@
 <script lang="ts">
     const product = {
-        name: "ねんどろいど おんJシリーズ 束音ロゼ （再販）株式会社おんJ 【送料無料】",
+        name: "（再販）ねんどろいど おんJシリーズ 束音ロゼ【送料無料】",
         price: 5800,
         discount: 10,
         labels: ["送料無料", "予約", "新品"],
