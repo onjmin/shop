@@ -1,6 +1,6 @@
 <script lang="ts">
     const product = {
-        name: "ねんどろいど　おんJシリーズ　束音ロゼ　（再販）株式会社おんJ　【送料無料】",
+        name: "ねんどろいど おんJシリーズ 束音ロゼ （再販）株式会社おんJ 【送料無料】",
         price: 5800,
         discount: 10,
         labels: ["送料無料", "予約", "新品"],
@@ -27,25 +27,25 @@
 
     const related = [
         {
-            name: "ねんどろいど　おんJシリーズ　束音ロゼ　アンヘルVer.",
+            name: "ねんどろいど おんJシリーズ 束音ロゼ アンヘルVer.",
             src: "https://i.imgur.com/DRBqNoO.png",
             price: 6000,
             discount: 10,
         },
         {
-            name: "ねんどろいど　おんJシリーズ　束音ロゼ & 矢野さとる",
+            name: "ねんどろいど おんJシリーズ 束音ロゼ & 矢野さとる",
             src: "https://i.imgur.com/ry0g7Tw.png",
             price: 7500,
             discount: 10,
         },
         {
-            name: "ねんどろいど　Syamu_Game & 妹",
+            name: "ねんどろいど Syamu_Game & 妹",
             src: "https://i.imgur.com/B5oro7w.png",
             price: 6800,
             discount: 10,
         },
         {
-            name: "ねんどろいど　淫夢　野獣先輩 & 遠野",
+            name: "ねんどろいど 淫夢 遠野 & 野獣先輩",
             src: "https://i.imgur.com/A1o3PgH.jpeg",
             price: 6400,
             discount: 10,
