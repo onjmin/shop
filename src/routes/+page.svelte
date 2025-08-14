@@ -1,5 +1,4 @@
 <script lang="ts">
-    // メイン商品情報
     const product = {
         name: "ねんどろいど　おんJシリーズ　束音ロゼ　（再販）株式会社おんJ　【送料無料】",
         price: 5800,
@@ -11,13 +10,21 @@
             { src: "https://i.imgur.com/vOnkUDA.png", alt: "角度B" },
             { src: "https://i.imgur.com/bRpp4zs.png", alt: "商品パッケージ" },
         ],
+        notice: "※画像はイメージです。",
+        description:
+            "人気フィギュアシリーズ「おんJ」より、束音ロゼが再登場！高精細造形と豊富な表情パーツで、あなただけのロゼを楽しめます。",
+        reservation: {
+            status: "予約受付中",
+            period: "2025年08月12日〜2025年09月10日まで",
+            shipDate: "2026年01月発送予定",
+            limit: "お1人様3点まで",
+        },
     };
 
     const discountedPrice = Math.round(
         product.price * (1 - product.discount / 100),
     );
 
-    // 関連商品
     const related = [
         {
             name: "ねんどろいど　おんJシリーズ　束音ロゼ　アンヘルVer.",
@@ -79,12 +86,13 @@
 
         <!-- 右: 商品情報 -->
         <div class="flex flex-col">
-            <h1 class="text-2xl font-bold mb-2">{product.name}</h1>
+            <p class="text-xs text-gray-400 mb-1">{product.notice}</p>
+            <h1 class="text-2xl font-bold mb-3">{product.name}</h1>
 
             <!-- ラベル -->
             <div class="flex gap-2 mb-3">
                 <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">
-                    10%OFF
+                    {product.discount}%OFF
                 </span>
                 {#each product.labels as label}
                     <span
@@ -105,16 +113,38 @@
                 </span>
             </div>
 
-            <p class="text-sm text-gray-300 mb-6">
-                人気フィギュアシリーズ「おんJ」より、束音ロゼが再登場！
-                高精細造形と豊富な表情パーツで、あなただけのロゼを楽しめます。
-            </p>
+            <p class="text-sm text-gray-300 mb-6">{product.description}</p>
 
-            <button
-                class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
-            >
-                カートに入れる
-            </button>
+            <!-- 予約情報 -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-6">
+                <div class="text-lg font-semibold text-yellow-400 mb-2">
+                    {product.reservation.status}
+                </div>
+                <div class="text-sm text-gray-300">
+                    予約期間：{product.reservation.period}
+                </div>
+                <div class="text-sm text-gray-300">
+                    {product.reservation.shipDate}・{product.reservation.limit}
+                </div>
+            </div>
+
+            <!-- ボタン -->
+            <div class="flex gap-3">
+                <button
+                    class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                >
+                    今すぐ予約注文
+                </button>
+                <button
+                    class="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-600 transition"
+                >
+                    ウォッチリストに追加
+                </button>
+            </div>
+
+            <p class="mt-4 text-xs text-gray-400">
+                ご登録の地域により販売状況が異なります。正しい販売状況はログインしてご確認ください。
+            </p>
         </div>
     </div>
 
