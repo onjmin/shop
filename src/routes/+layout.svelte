@@ -1,6 +1,7 @@
 <script lang="ts">
 	import "../app.css";
 	import favicon from "$lib/assets/favicon.svg";
+	import { resolve } from "$app/paths";
 
 	const { children } = $props();
 </script>
@@ -20,7 +21,7 @@
 				ねんどろいどショップ
 			</h1>
 			<nav class="flex gap-4 text-sm font-medium">
-				<a href="/" class="hover:text-blue-300">ホーム</a>
+				<a href={resolve("/")} class="hover:text-blue-300">ホーム</a>
 				<a href="cart" class="hover:text-blue-300">カート</a>
 				<a href="faq" class="hover:text-blue-300">お問い合わせ</a>
 			</nav>
