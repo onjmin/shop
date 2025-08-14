@@ -130,11 +130,12 @@
 
             <!-- ボタン -->
             <div class="flex gap-3">
-                <button
-                    class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                <a
+                    href="/order"
+                    class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition text-center"
                 >
                     今すぐ予約注文
-                </button>
+                </a>
                 <button
                     class="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-600 transition"
                 >
