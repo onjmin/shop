@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as v from "valibot";
 
+    // --- フォーム関連 ---
     let name = $state("");
     let email = $state("");
     let address = $state("");
@@ -8,10 +9,8 @@
     let cardNumber = $state("");
     let cardExpiry = $state("");
     let cardCvc = $state("");
-
     let errors: Record<string, string> = $state({});
 
-    // Valibotスキーマ
     // Valibotスキーマ
     const orderSchema = v.object({
         name: v.pipe(v.string(), v.minLength(1, "お名前を入力してください")),
@@ -60,28 +59,56 @@
         });
 
         if (!result.success) {
-            errors = {};
-
             for (const err of result.issues) {
-                // path が存在して、先頭が文字列なら使用
                 const key = err.path?.[0];
-                if (typeof key === "string") {
-                    errors[key] = err.message;
-                }
+                if (typeof key === "string") errors[key] = err.message;
             }
             return;
         }
 
         alert("注文を受け付けました！");
     }
+
+    // --- 商品情報モック ---
+    const product = {
+        name: "ねんどろいど おんJシリーズ 束音ロゼ（再販）",
+        price: 5800,
+        discount: 10,
+        mainImage: "https://i.imgur.com/VSyr9Ni.png",
+    };
+
+    const discountedPrice = Math.round(
+        product.price * (1 - product.discount / 100),
+    );
 </script>
 
 <div
-    class="max-w-lg mx-auto bg-gray-900 text-gray-100 p-6 rounded-lg shadow-lg"
+    class="max-w-lg mx-auto p-6 space-y-6 bg-gray-900 text-gray-100 rounded-lg shadow-lg"
 >
-    <h1 class="text-xl font-bold mb-6">今すぐ予約注文</h1>
+    <!-- 選択中商品モック -->
+    <div
+        class="flex gap-4 items-center border border-gray-700 rounded-lg p-4 bg-gray-800"
+    >
+        <img
+            src={product.mainImage}
+            alt={product.name}
+            class="w-24 h-24 object-cover rounded"
+        />
+        <div class="flex-1 space-y-1">
+            <div class="font-semibold text-lg">{product.name}</div>
+            <div>
+                <span class="text-red-400 font-bold text-lg"
+                    >¥{discountedPrice.toLocaleString()}</span
+                >
+                <span class="text-gray-400 line-through ml-2"
+                    >¥{product.price.toLocaleString()}</span
+                >
+            </div>
+        </div>
+    </div>
 
-    <form class="space-y-5">
+    <!-- 注文フォーム -->
+    <form onsubmit={handleSubmit} class="space-y-5">
         <!-- 名前 -->
         <div>
             <label for="name" class="block text-sm mb-1">お名前</label>
