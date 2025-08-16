@@ -8,7 +8,7 @@
         images: [
             { src: "https://i.imgur.com/VSyr9Ni.png", alt: "角度A" },
             { src: "https://i.imgur.com/vOnkUDA.png", alt: "角度B" },
-            { src: "https://i.imgur.com/bRpp4zs.png", alt: "商品パッケージ" },
+            { src: "https://i.imgur.com/uuIyGzD.png", alt: "商品パッケージ" },
         ],
         notice: "※画像はイメージです。",
         description:
