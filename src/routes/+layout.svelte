@@ -7,7 +7,7 @@
 	const title = "ねんどろいどショップ";
 	const description =
 		"人気キャラクターのねんどろいどを予約・購入できる公式通販サイト。送料無料・予約特典つき！";
-	const image = "https://i.imgur.com/AQV3TtI.png";
+	const image = "https://i.imgur.com/uuIyGzD.png";
 </script>
 
 <svelte:head>
