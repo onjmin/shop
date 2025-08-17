@@ -4,11 +4,39 @@
 	import { resolve } from "$app/paths";
 
 	const { children } = $props();
+	const title = "ねんどろいどショップ";
+	const description =
+		"人気キャラクターのねんどろいどを予約・購入できる公式通販サイト。送料無料・予約特典つき！";
+	const image = "https://i.imgur.com/AQV3TtI.png";
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>ねんどろいどショップ</title>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+
+	<!-- Open Graph -->
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={resolve("/")} />
+	<meta property="og:image" content={image} />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={image} />
+
+	<!-- Apple Touch Icon -->
+	<link rel="apple-touch-icon" href={image} />
+
+	<!-- ブランドカラー：オレンジ寄りレッドでポップに -->
+	<meta name="theme-color" content="#F97316" />
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/gif.js.optimized/dist/gif.js"
+	></script>
 </svelte:head>
 
 <div class="min-h-screen flex flex-col bg-gray-900 text-gray-100">
